@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  ocserv:
+    image: tommylau/ocserv:0.12.1
+    hostname: "ocserv"
+    ports:
+      - "443:443/tcp"
+      - "443:443/udp"
+    volumes:
+      - "./ocpasswd:/etc/ocserv/ocpasswd"
+      - "./ocserv.conf:/etc/ocserv/ocserv.conf"
+      - "./certs:/etc/ocserv/certs"
+    command: ["ocserv", "-c", "/etc/ocserv/ocserv.conf", "-f", "-d1"]
+    restart: "always"
+    privileged: true

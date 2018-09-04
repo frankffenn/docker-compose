@@ -1,0 +1,8 @@
+consul/data/*
+mongo/data/*
+mysql/data/*
+ocserv/certs/*
+openvpn/data/*
+portainer/data/*
+rabbitmq/data/*
+redis/data/*

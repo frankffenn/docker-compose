@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  redis:
+    image: redis:4.0.6
+    ports:
+      - "16379:6379"
+    volumes:
+      - "./redis.conf:/redis/config/redis.conf"
+      - "./data:/redis/data"
+    command: ["/redis/config/redis.conf"]
+    restart: "always"

@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  openvpn:
+    image: kylemanna/openvpn
+    ports:
+      - "443:1194/tcp"
+      - "443:1194/udp"
+    volumes:
+      - "./data:/etc/openvpn"
+    cap_add:
+      - "NET_ADMIN"
+    restart: "always"

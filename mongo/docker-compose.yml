@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  mongo:
+    image: mongo:3.6.6
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "mongo"
+      MONGO_INITDB_ROOT_PASSWORD: "EakEFk9uGh"
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./mongod.conf:/etc/mongo/mongod.conf"
+      - "./data:/data/db"
+    restart: "always"
+  express:
+    image: mongo-express:0.45.0
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: "express"
+      ME_CONFIG_BASICAUTH_PASSWORD: "MWUNG9gnY7"
+      ME_CONFIG_MONGODB_ADMINUSERNAME: "mongo"
+      ME_CONFIG_MONGODB_ADMINPASSWORD: "EakEFk9uGh"
+      ME_CONFIG_OPTIONS_EDITORTHEME: "ambiance"
+    ports:
+      - "27080:8081"
+    restart: "always"

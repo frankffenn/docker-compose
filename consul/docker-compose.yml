@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  consul:
+    image: consul:1.2.2
+    hostname: "consul"
+    ports:
+      - "8500:8500"
+    volumes:
+      - "./config.json:/consul/config/consul.json"
+      - "./data:/consul/data"
+    command: ["agent"]
+    restart: "always"
