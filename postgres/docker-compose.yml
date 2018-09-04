@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres:9.6.10
+    environment:
+      - POSTGRES_PASSWORD=vi9ZqIQB9T
+    ports:
+      - "15432:5432"
+    volumes:
+      - "./data:/var/lib/postgresql/data"
+      - "./my-postgres.conf:/etc/postgresql/postgresql.conf"
+    command: ["-c", "config_file=/etc/postgresql/postgresql.conf"]
+    restart: "always"

@@ -4,5 +4,6 @@ mysql/data/*
 ocserv/certs/*
 openvpn/data/*
 portainer/data/*
+postgres/data/*
 rabbitmq/data/*
 redis/data/*
