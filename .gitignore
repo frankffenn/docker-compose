@@ -1,4 +1,5 @@
 consul/data/*
+filebrowser/data/*
 mongo/data/*
 mysql/data/*
 ocserv/certs/*
