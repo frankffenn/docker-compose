@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   mysql:
-    image: mysql:5.7.22
+    image: mysql:5.7.23
     environment:
       - MYSQL_ROOT_PASSWORD=vi9ZqIQB9T
     ports:
