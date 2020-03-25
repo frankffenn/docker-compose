@@ -1,12 +1,8 @@
 {
   "port": 80,
+  "baseURL": "",
   "address": "",
+  "log": "stdout",
   "database": "/db/filebrowser.db",
-  "defaults": {
-    "scope": "/srv",
-    "allowCommands": true,
-    "allowEdit": true,
-    "allowNew": true,
-    "commands": []
-  }
+  "root": "/srv"
 }
