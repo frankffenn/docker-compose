@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  imgproxy:
+    image: darthsim/imgproxy:v2.11.0
+    environment:
+      - IMGPROXY_LOCAL_FILESYSTEM_ROOT=/var/data/imgs
+    ports:
+      - "18080:8080"
+    volumes:
+      - "./data:/var/data"
+    restart: "always"
