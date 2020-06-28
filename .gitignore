@@ -1,5 +1,9 @@
+# for mac
+.DS_Store
+
 consul/data/*
 filebrowser/data/*
+imgproxy/data/*
 kafka/data/*
 mongo/data/*
 mysql/data/*
