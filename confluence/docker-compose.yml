@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  # mysql:
+  #   image: mysql:5.7
+  #   environment:
+  #   MYSQL_ROOT_PASSWORD: 3a99bce0c4991b91
+  #   ports:
+  #     - "8500:8500"
+  #   volumes:
+  #     - /opt/docker/mysql/conf:/etc/mysql/mysql.conf.d
+  #     - /opt/docker/mysql/data:/usr/local/mysql/data
+  #     - /opt/docker/mysql/logs/:/usr/local/mysql/logs
+  #   restart: "always"
+  confluence:
+    image: cptactionhank/atlassian-confluence:latest
+    ports:
+      - "8090:8090"
+    # links:
+    #   - mysql:mysql
+    restart: "always"
